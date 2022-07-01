@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="container mt-5">
-      <h1 class="mb-5">Trabajo Practico N°7</h1>
+      <h2 class="mb-5">TP N°7</h2>
       <NavBar />
       <router-view></router-view>
     </div>
@@ -19,11 +19,11 @@ export default {
 </script>
 
 <style>
-h1 {
+h2 {
   text-align: center;
   color: #fff;
 }
 body {
-  background-color: #3a3845 !important;
+  background-color: #2f0931 !important;
 }
 </style>

@@ -1,24 +1,17 @@
 <template>
   <section class="src-components-tabla">
     <div class="jumbotron">
-      <!-- Tabla -->
       <table class="table">
-        <thead class="thead-dark">
           <tr>
             <th scope="col">Nombre</th>
             <th scope="col">Edad</th>
             <th scope="col">Email</th>
           </tr>
-        </thead>
         <tbody>
-          <tr
-            v-for="(data, index) in this.posts"
-            :key="index"
-            class="table-light"
-          >
-            <td>{{ data.nombre }}</td>
+          <tr v-for="(data, index) in this.posts" :key="index" >
+            <td>{{ data.name }}</td>
             <td>{{ data.edad }}</td>
-            <td>{{ data.email }}</td>
+            <td>{{ data.mail }}</td>
           </tr>
         </tbody>
       </table>
@@ -35,17 +28,15 @@ export default {
   },
   data() {
     return {
-      url: "https://62842c2aa48bd3c40b6bd976.mockapi.io/usuariosTp7",
+      url: "https://62af9a383bbf46a35223feae.mockapi.io/users",
       posts: [],
     };
   },
   methods: {
     getUsuarios() {
       this.axios(this.url)
-        .then(({ data }) => {
-          this.posts = data;
-        })
-        .catch((error) => console.error("Error Axios", error));
+        .then(({ data }) => { this.posts = data; })
+        .catch((error) => console.error("Error", error));
     },
   },
 
@@ -55,8 +46,12 @@ export default {
 
 <style scoped lang="css">
 .jumbotron {
-  background-color: #03045e;
-  color: white;
-  border-radius: 10px;
+  background-color: rgb(32, 3, 55);
+  color: rgb(202, 166, 214);
+  border-radius: 5px;
+}
+.table {
+  background-color: rgb(32, 3, 55);
+  color: rgb(202, 166, 214);
 }
 </style>

@@ -46,11 +46,11 @@ export default {
 
 <style scoped lang="css">
 nav {
-  border-radius: 10px;
-  background-color: #dee2e6;
+  border-radius: 5px;
+  background-color: #b9bcbf;
 }
 a {
   color: black !important;
-  font-weight: 600;
+  font-weight: 900;
 }
 </style>

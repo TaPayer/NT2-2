@@ -113,7 +113,7 @@ export default {
       nombreMaxLength: 15,
       edadMin: 18,
       edadMax: 120,
-      url: "https://62842c2aa48bd3c40b6bd976.mockapi.io/usuariosTp7",
+      url: "https://62af9a383bbf46a35223feae.mockapi.io/users",
     };
   },
   methods: {
@@ -126,15 +126,13 @@ export default {
     },
     enviar() {
       this.enviarUsuarios(this.formData);
-      this.formData = this.getInicialData(); //reset de los datos del vue-form
-      this.formState._reset(); //reseet de los estados vue-form
+      this.formState._reset(); 
+      this.formData = this.getInicialData(); 
     },
     async enviarUsuarios(formData) {
       let usuarioNuevo = formData;
       try {
-        await this.axios.post(this.url, usuarioNuevo, {
-          "content-type": "application/json",
-        });
+        await this.axios.post(this.url, usuarioNuevo, { "content-type": "application/json", });
       } catch (error) {
         console.error("Error Axios", error);
       }
@@ -146,8 +144,9 @@ export default {
 
 <style scoped lang="css">
 .jumbotron {
-  background-color: #03045e;
+  background-color: #2f0931;
   color: white;
-  border-radius: 10px;
+  padding: 3px;
+  border-radius: 5px;
 }
 </style>

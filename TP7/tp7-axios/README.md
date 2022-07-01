@@ -1,4 +1,4 @@
-# tp7-axios
+# tp7
 
 ## Project setup
 ```
